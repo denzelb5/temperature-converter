@@ -1,3 +1,15 @@
-body {
-    background-color: cadetblue; 
+
+
+#header {
+    
+    box-shadow: #c3c8ce 5px 5px 5px 5px;
+    background-color: #287994;
+}
+
+.container {
+    text-align: center;
+    font-family: 'Modak', cursive;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    color: #c3c8ce;
+    
 }
