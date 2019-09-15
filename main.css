@@ -13,3 +13,16 @@
     color: #c3c8ce;
     
 }
+
+#input-box {
+    width: 300px;
+    margin-top: 5em;
+    margin-left: 5em;
+    
+
+}
+
+.form-control {
+    text-align:center;
+    
+}
