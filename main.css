@@ -25,10 +25,15 @@
     margin-top: 6em;
 }
 
-.form-control {
+.input-box {
     text-align: center;
+    width: 300px;
 }
-    
+
+.radio-button {
+    text-align: center;
+    width: 3em;
+}
 
 .input-group {
     margin-bottom: 1em;
