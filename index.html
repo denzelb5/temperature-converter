@@ -17,28 +17,31 @@
       </div>
       <div id="entryForm">
         <div class="input-group mb-3" id="input-box">
-          <input type="text" class="form-control" placeholder="Enter Temperature" aria-label="Enter Temperature" aria-describedby="basic-addon1">
+          <input type="text" class="input-box" id="input" placeholder="Enter Temperature" aria-label="Enter Temperature" aria-describedby="basic-addon1">
         </div>
-    <div id="radio-container">
-         <div class="input-group">
-          <div class="input-group-prepend">
-            <div class="input-group-text">
-              <input type="radio" aria-label="Radio button for following text input">
+        <div id="radio-container" class="btn-group btn-group-toggle" data-toggle="buttons">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <input id="C" type="radio" name="radioButtons" class="btn-group btn-group-toggle" data-toggle="buttons" aria-label="Radio button for following text input">
+                </div>
+              </div>
+              <input  type="text" class="radio-button" aria-label="Text input with radio button" placeholder="C°">
             </div>
-          </div>
-          <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="C°">
-        </div>
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <div class="input-group-text">
-              <input type="radio" aria-label="Radio button for following text input">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <input id ="F" type="radio" name="radioButtons" data-toggle="buttons" aria-label="Radio button for following text input">
+                </div>
+              </div>
+              <input  type="text" class="radio-button" aria-label="Text input with radio button" placeholder="F°">
             </div>
-          </div>
-          <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="F°">
         </div>
-  </div>
-    </div> 
-    
+        </div> 
+        <div id="convert-container">
+          <button type="button" id="convert-button" class="btn btn-info">Convert</button>
+        </div>
+        <div id="output-box"></div>
       
 
     <script src="./main.js"></script>
