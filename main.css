@@ -45,3 +45,14 @@
 #radio-container {
     display: flex;
 }
+
+#convert-container {
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+}
+
+#convert-button {
+    width: 300px;
+    background-color: #287994;
+}
