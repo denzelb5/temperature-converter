@@ -11,5 +11,37 @@
     font-family: 'Modak', cursive;
     font-family: 'Saira Extra Condensed', sans-serif;
     color: #c3c8ce;
+}
+
+#input-box {
+    width: 300px;
+    margin-right: 2em;
+}
+
+#entryForm {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 6em;
+}
+
+.form-control {
+    text-align: center;
+}
     
+
+.input-group {
+    margin-bottom: 1em;
+    width: 6em;
+}
+
+.input-group-text {
+    height: 38px;
+    width: 35px;
+    background-color: #9E9E9E;
+    margin-left: 10px;
+}
+
+#radio-container {
+    display: flex;
 }
