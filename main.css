@@ -60,4 +60,12 @@
 #convert-button {
     width: 300px;
     background-color: #287994;
+    color: whitesmoke;
+    height: 40px;
 }
+
+#output-box {
+    display: flex;
+    justify-content: center;
+}
+

@@ -7,32 +7,19 @@ const printToDom = (toPrint, divId) => {
 
 const toCelsius =  (fahrenheit) => {
      let celsius = (fahrenheit - 32) / 1.8;
-     return celsius;
+     return Math.floor(celsius);
 }
 
 const toFahrenheit =  (celsius) => {
     let fahrenheit = (celsius * 1.8) + 32;
-    return fahrenheit;
+    return Math.floor(fahrenheit);
 }
 
 const button = document.getElementById("convert-button");
 
 
 
-// C.addEventListener('click', (event) => {
-//     C = inputValue;
-//     return C;
-// });
-    
 
-
-//  F.addEventListener('click', (event) => {
-//     F = event.target.id;
-//     return
-// });
-
-// This function should determine which conversion should
-// happen based on which radio button is selected.
 const determineConverter = (e) => {
     const inputValue = document.getElementById('input').value;
 console.log(inputValue);
@@ -50,3 +37,17 @@ console.log(inputValue);
 // Assign a function to be executed when the button is clicked
 button.addEventListener("click", determineConverter);
 
+const buttonGroup = document.getElementsByClassName('buttons');
+const findButtonArray = (buttonArr) => {
+    for (let i = 0; i < buttonArr.length; i++) {
+        let buttons = buttonArr[i];
+        buttons.addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                document.getElementById("convert-button").click();
+            }
+        })
+    }
+
+}
+findButtonArray(buttonGroup)
