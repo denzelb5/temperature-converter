@@ -63,9 +63,18 @@
     color: whitesmoke;
     height: 40px;
 }
-
-#output-box {
+#output-box-container {
     display: flex;
     justify-content: center;
+}
+
+#output-box {
+    margin-top: 3em;
+    border: 1px solid lightgray;
+    height: 3em;
+    width: 8em;
+    padding-top: 10px;
+    border-radius: 5px;
+    text-align: center;
 }
 
