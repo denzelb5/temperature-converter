@@ -20,30 +20,30 @@ const button = document.getElementById("convert-button");
 const changeColor = (temp, scale) => {
    // inputValue = document.getElementById('input').value;
     result = document.getElementById('output-box');
-    scale = document.getElementsByClassName('radio-button');
+    //document.getElementsByClassName('radio-button');
     if (scale === 'C') {
         console.log(temp)
-        switch(temp) {
+        switch(true) {
             case temp < 0:
-                    result.classList.toggle('blue');
+                    result.className ='text-primary';
                 break;
             case temp > 32:
-                    result.classList.toggle('red');
+                    result.className = 'text-danger';
                 break;
             default:
-                    result.classList.toggle('green');
+                    result.className = 'text-success';
                 break;
         }
     } else {
-        switch(temp) {
+        switch(true) {
             case temp < 32:
-                    result.classList.toggle('blue');
+                    result.className = 'text-primary';
                 break;
             case temp > 90:
-                    result.classList.toggle('red');
+                    result.className = 'text-danger';
                 break;
             default:
-                    result.classList.toggle('green');
+                    result.className = 'text-success';
                 break;
 
         }
@@ -61,10 +61,10 @@ const determineConverter = (e) => {
     const C = document.getElementById('C');
     let radioButton = document.getElementsByClassName('radio-button');
     if (C.checked) {
-        printToDom(toCelsius(inputValue), 'output-box')
+        printToDom(toCelsius(inputValue) + ' C°', 'output-box')
         changeColor(toCelsius(inputValue), 'C')
     } else if (F.checked) {
-        printToDom(toFahrenheit(inputValue), 'output-box')
+        printToDom(toFahrenheit(inputValue) + ' F°', 'output-box')
         changeColor(toFahrenheit(inputValue), 'F')
     }
 }
