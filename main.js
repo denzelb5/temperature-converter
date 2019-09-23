@@ -17,29 +17,34 @@ const toFahrenheit =  (celsius) => {
 
 const button = document.getElementById("convert-button");
 
-const changeColor = (inputValue, scale) => {
-    inputValue = document.getElementById('input').value;
+const changeColor = (temp, scale) => {
+   // inputValue = document.getElementById('input').value;
     result = document.getElementById('output-box');
-    scale = document.getElementsByClassName('radio-button');
+    //document.getElementsByClassName('radio-button');
     if (scale === 'C') {
-        switch(inputValue) {
-            case inputValue < 0:
-                    result.setAttribute('class', 'text-primary');
+        console.log(temp)
+        switch(true) {
+            case temp < 0:
+                    result.className ='text-primary';
                 break;
-            case inputValue > 32:
-                    result.setAttribute('class', 'text-danger');
+            case temp > 32:
+                    result.className = 'text-danger';
                 break;
             default:
-                    result.setAttribute('class', 'text-success');
+                    result.className = 'text-success';
+                break;
         }
     } else {
-        switch(inputValue) {
-            case inputValue < 32:
-                    result.setAttribute('class', 'text-primary');
-            case inputValue > 90:
-                    result.setAttribute('class', 'text-danger');
+        switch(true) {
+            case temp < 32:
+                    result.className = 'text-primary';
+                break;
+            case temp > 90:
+                    result.className = 'text-danger';
+                break;
             default:
-                    result.setAttribute('class', 'text-success');
+                    result.className = 'text-success';
+                break;
 
         }
     }
@@ -56,11 +61,11 @@ const determineConverter = (e) => {
     const C = document.getElementById('C');
     let radioButton = document.getElementsByClassName('radio-button');
     if (C.checked) {
-        printToDom(toCelsius(inputValue), 'output-box')
-        changeColor(inputValue, 'C')
+        printToDom(toCelsius(inputValue) + ' C°', 'output-box')
+        changeColor(toCelsius(inputValue), 'C')
     } else if (F.checked) {
-        printToDom(toFahrenheit(inputValue), 'output-box')
-        changeColor(inputValue, 'F')
+        printToDom(toFahrenheit(inputValue) + ' F°', 'output-box')
+        changeColor(toFahrenheit(inputValue), 'F')
     }
 }
 
