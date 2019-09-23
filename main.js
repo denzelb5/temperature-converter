@@ -21,7 +21,7 @@ const changeColor = (inputValue, scale) => {
     inputValue = document.getElementById('input').value;
     result = document.getElementById('output-box');
     scale = document.getElementsByClassName('radio-button');
-    if(scale === 'C') {
+    if (scale === 'C') {
         switch(inputValue) {
             case inputValue < 0:
                     result.setAttribute('class', 'text-primary');
@@ -32,7 +32,17 @@ const changeColor = (inputValue, scale) => {
             default:
                     result.setAttribute('class', 'text-success');
         }
-    } 
+    } else {
+        switch(inputValue) {
+            case inputValue < 32:
+                    result.setAttribute('class', 'text-primary');
+            case inputValue > 90:
+                    result.setAttribute('class', 'text-danger');
+            default:
+                    result.setAttribute('class', 'text-success');
+
+        }
+    }
 }
 
 
@@ -46,11 +56,11 @@ const determineConverter = (e) => {
     const C = document.getElementById('C');
     let radioButton = document.getElementsByClassName('radio-button');
     if (C.checked) {
-       
-        printToDom(changeColor(toCelsius(inputValue)), 'output-box')
-        //changeColor(inputValue, 'C')
+        printToDom(toCelsius(inputValue), 'output-box')
+        changeColor(inputValue, 'C')
     } else if (F.checked) {
         printToDom(toFahrenheit(inputValue), 'output-box')
+        changeColor(inputValue, 'F')
     }
 }
 
@@ -76,7 +86,7 @@ const findButtonArray = (buttonArr) => {
     }
 
 }
-findButtonArray(buttonGroup)
+// findButtonArray(buttonGroup)
  //let output = document.getElementById('output-box');
 // let x = output;
 // console.log(x);
