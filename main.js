@@ -77,6 +77,9 @@ const determineConverter = (e) => {
 // Assign a function to be executed when the button is clicked
 button.addEventListener("click", determineConverter);
 
+document.getElementById('clear-button').addEventListener('click', () => {
+    printToDom('', 'output-box')
+})
 
 const buttonGroup = document.getElementsByClassName('buttons');
 const findButtonArray = (buttonArr) => {
