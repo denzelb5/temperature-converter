@@ -78,3 +78,10 @@
     text-align: center;
 }
 
+#clear-button {
+    width: 75px;
+    height: 40px;
+    margin-top: 3em;
+    margin-left: 3em;
+    text-align: center;
+}

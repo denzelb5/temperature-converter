@@ -15,9 +15,10 @@
           <p class="lead">Convert temperatures from Fahrenheit to Celsius and Celsius to Fahrenheit</p>
         </div>
       </div>
+      <form>
       <div id="entryForm">
         <div class="input-group mb-3" id="input-box">
-          <input type="number" class="input-box" id="input" placeholder="Enter Temperature" aria-label="Enter Temperature" aria-describedby="basic-addon1">
+          <input type="number" type="reset" class="input-box" id="input" placeholder="Enter Temperature" aria-label="Enter Temperature" aria-describedby="basic-addon1">
         </div>
         <div id="radio-container" class="btn-group btn-group-toggle" data-toggle="buttons">
             <div class="input-group">
@@ -42,9 +43,10 @@
           <button type="button" id="convert-button" class="buttons">Convert</button>
         </div>
         <div id="output-box-container">
-        <div id="output-box" class=""></div>
-        <button type="button" class="btn btn-secondary">Clear</button>
+        <div id="output-box"></div>
+        <button type="reset" id="clear-button" class="btn btn-secondary">Clear</button>
       </div>
+    </form>
 
     <script src="./main.js"></script>
 </body>
