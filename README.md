@@ -7,7 +7,7 @@ Javascript, CSS, HTML, Bootstrap
 A program that converts temperatures from Fahrenheit to Celsius and Celsius to Fahrenheit.
 
 ## Screenshots
-![Screenshot-1](./screenshots/temp-converter-screen-shot.png)
+![Screenshot-1](https://github.com/denzelb5/temperature-converter/blob/master/screenshots/temp-converter-screen-shot.png?raw=true)
 
 ## How to run
 * Clone down this project
